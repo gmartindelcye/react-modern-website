@@ -6,5 +6,6 @@ Uses only react and css
 
 ```bash
 npm install
+npm install react-scroll
 npm run dev
 ```
