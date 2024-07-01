@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import "./About.css";
 import about_img from "../../assets/about.png";
 import play_icon from "../../assets/play-icon.png";
 
-const About = () => {
+const About = ({ setPlayState }) => {
   return (
     <div className="about">
       <div className="about-left">
@@ -15,6 +16,9 @@ const About = () => {
           src={play_icon}
           alt=""
           className="play-icon"
+          onClick={() => {
+            setPlayState(true);
+          }}
         />
       </div>
       <div className="about-right">
@@ -23,9 +27,8 @@ const About = () => {
         <p>
           Embark on a transformative educational journey with our
           university&apos;s comprehensive education programs. Our cutting-edge
-          curriculum is designed to empower students with the knowledge,
-          skilled, and experiences needed to excel in the dynamic field of
-          education
+          curriculum is designed to empower students with the knowledge, skills,
+          and experiences needed to excel in the dynamic field of education
         </p>
         <p>
           With a focus on innovation, hands-on learning, and personalized
@@ -35,11 +38,15 @@ const About = () => {
         <p>
           Whether you aspire to become a teacher, administrator, counselor, or
           educational leader, our diverse range of programs offers the perfect
-          pathway to achieve your goals unlock your full potential in shaping
-          the future of education.
+          pathway to achieve your goals and unlock your full potential in
+          shaping the future of education.
         </p>
       </div>
     </div>
   );
+};
+
+About.propTypes = {
+  setPlayState: PropTypes.func.isRequired,
 };
 export default About;
