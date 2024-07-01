@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Programs from "./components/Programs/Programs";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Title from "./components/Title/Title";
+// import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         <Contact />
         <Footer />
       </div>
+      {/* <VideoPlayer /> */}
     </div>
   );
 };
